@@ -1,0 +1,39 @@
+<div class="calculator">
+
+    <input type="text" class="calculator-screen calculator-input-screen" [value]="stack" (keyup)="updatestack($event)" />
+    <input type="text" class="calculator-screen" [value]="totalNumber" disabled />
+    
+    <div class="calculator-keys">
+      
+      <button type="button" (click) = "updatevalue('+')" class="operator" value="+">+</button>
+      <button type="button" (click) = "updatevalue('-')" class="operator" value="-">-</button>
+      <button type="button" (click) = "updatevalue('*')" class="operator" value="*">&times;</button>
+      <button type="button" (click) = "updatevalue('/')" class="operator" value="/">&divide;</button>
+  
+      <button type="button" (click) = "updatevalue('%')" class="operator" value="%">%</button>
+      <button type="button" (click) = "updatevalue('(')" class="operator" value="(">(</button>
+      <button type="button" (click) = "updatevalue(')')" class="operator" value=")">)</button>
+  
+      <button type="button" (click) = "updatevalue('7')" value="7">7</button>
+      <button type="button" (click) = "updatevalue('8')" value="8">8</button>
+      <button type="button" (click) = "updatevalue('9')" value="9">9</button>
+  
+  
+      <button type="button" (click) = "updatevalue('4')" value="4">4</button>
+      <button type="button" (click) = "updatevalue('5')" value="5">5</button>
+      <button type="button" (click) = "updatevalue('6')" value="6">6</button>
+  
+  
+      <button type="button" (click) = "updatevalue('1')" value="1">1</button>
+      <button type="button" (click) = "updatevalue('2')" value="2">2</button>
+      <button type="button" (click) = "updatevalue('3')" value="3">3</button>
+  
+  
+      <button type="button" (click) = "updatevalue('0')" value="0">0</button>
+      <button type="button" (click) = "updatevalue('.')" class="decimal" value=".">.</button>
+      <button type="button" (click) = "clear()"  class="all-clear" value="all-clear">AC</button>
+  
+      <button type="button" (click) = "doCalculation()" class="equal-sign" value="=">=</button>
+  
+    </div>
+  </div>
